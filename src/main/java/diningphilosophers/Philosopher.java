@@ -54,11 +54,11 @@ public class Philosopher extends Thread {
         if (c1.isiAmFree()) {
             c1.take();
             if (c2.isiAmFree()) {
-                takeAll(c2,c1);
+                theEnd(c2,c1);
             } else {
                 think();
                 if (c2.isiAmFree()) {
-                    takeAll(c2,c1);
+                    theEnd(c2,c1);
                 } else {
                     c2.release();
                 }
@@ -67,7 +67,7 @@ public class Philosopher extends Thread {
     }
 
 
-    public void takeAll(ChopStick c1,ChopStick c2) throws InterruptedException {
+    public void theEnd(ChopStick c1,ChopStick c2) throws InterruptedException {
         c1.take();
         eat();
         c1.release();

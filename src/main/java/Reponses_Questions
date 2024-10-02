@@ -3,8 +3,10 @@ Il y a 3 baguettes
 ---> Stick1 <- Philo1 -> Stick2 <- Philo2 -> Stick3 <- Philo3 ------
 
 Question 1 :
-
-
+utiliser des blocs synchronisés et les fonctions `wait()` et `notifyAll()`
+pour s'assurer qu'un philosophe attend si une baguette est déjà prise et qu'il est notifié lorsqu'elle est libérée.
 
 
 Question 2 :
+Deadlock
+tt le monde attend que chacun relache la baguette que l'autre retient
